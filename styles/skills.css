@@ -86,7 +86,9 @@
     display: block;
     text-align: left;
 }
-
+.level-text i {
+  color: #FFD700;
+}
 /* تاغات المهارات */
 .skill-tags {
     display: flex;
