@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://salanarty.free.nf/sitemap.xml
+
+Disallow: /admin/
+Disallow: /private/

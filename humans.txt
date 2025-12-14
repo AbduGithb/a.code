@@ -1,0 +1,15 @@
+/* TEAM */
+    Developer: عبد الله الزبير
+    Contact: salanarty@gmail.com
+    Twitter: @yourusername
+    Location: الرياض، السعودية
+
+/* THANKS */
+    Google Fonts, Font Awesome, Unsplash
+
+/* SITE */
+    Last update: 2024/01/15
+    Language: Arabic
+    Doctype: HTML5
+    Components: HTML5, CSS3, JavaScript
+    Software: VS Code

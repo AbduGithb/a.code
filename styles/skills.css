@@ -1,0 +1,323 @@
+/* قسم المهارات */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-item {
+    background: var(--light-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+
+.skill-icon {
+    font-size: 3rem; 
+    margin-bottom: 1rem;
+}
+
+.skill-item h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.skills h2{
+    margin-bottom: 30px;
+}
+
+
+/* تفاصيل المهارات */
+.skill-details {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover .skill-details {
+    opacity: 1;
+    max-height: 500px;
+}
+
+/* شريط مستوى المهارة */
+.skill-level {
+    margin-bottom: 1rem;
+}
+
+.level-bar {
+    width: 100%;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.level-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+    border-radius: 4px;
+    transition: width 1s ease-in-out;
+    width: 0; /* Default width */
+}
+
+/* Specific width classes for different skill levels */
+.level-progress-95 { width: 95%; }
+.level-progress-90 { width: 90%; }
+.level-progress-88 { width: 88%; }
+.level-progress-85 { width: 85%; }
+.level-progress-82 { width: 82%; }
+.level-progress-80 { width: 80%; }
+.level-progress-75 { width: 75%; }
+
+.level-text {
+    font-size: 0.85rem;
+    color: #666;
+    display: block;
+    text-align: left;
+}
+
+/* تاغات المهارات */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    background: var(--bg-color);
+    color: var(--primary-color);
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* قائمة الميزات */
+.skill-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-features li {
+    position: relative;
+    padding-right: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.skill-features li:before {
+    content: "✓";
+    position: absolute;
+    right: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* أيقونات SVG */
+.flutter-svg,
+.dart-svg {
+    width: 48px;
+    height: 48px;
+}
+
+
+/* تأثيرات إضافية للمهارات */
+.skill-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 30%, rgba(255, 255, 255, 0.1) 100%);
+    z-index: 1;
+    transition: transform 0.5s ease;
+    transform: translateX(100%);
+}
+
+.skill-item:hover::before {
+    transform: translateX(0);
+}
+/* تخصيص ألوان Font Awesome حسب التقنية */
+/* ألوان خاصة لكل مهارة */
+#html .skill-icon i { color: #E34F26; }
+#css .skill-icon i { color: #1572B6; }
+#js .skill-icon i { color: #F7DF1E; }
+#wordpress .skill-icon i { color: #21759B; }
+#mysql .skill-icon i { color: #4479A1; }
+
+/* تدرجات ألوان لشريط التقدم */
+#html .level-progress { background: linear-gradient(90deg, #E34F26, #FF6B35); }
+#css .level-progress { background: linear-gradient(90deg, #1572B6, #3399FF); }
+#js .level-progress { background: linear-gradient(90deg, #F7DF1E, #FFEB3B); }
+#wordpress .level-progress { background: linear-gradient(90deg, #21759B, #3498DB); }
+#flutter .level-progress { background: linear-gradient(90deg, #02569B, #0288D1); }
+#dart .level-progress { background: linear-gradient(90deg, #0175C2, #03A9F4); }
+#mysql .level-progress { background: linear-gradient(90deg, #4479A1, #5D8FB5); }
+
+/* زر عرض التفاصيل */
+.skill-toggle {
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.skill-toggle:hover {
+    background: rgba(52, 152, 219, 0.1);
+}
+
+@media (max-width: 768px) {
+    .skill-details {
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+    
+    .skill-item.active .skill-details {
+        max-height: 500px;
+        opacity: 1;
+    }
+    
+    .skill-toggle {
+        display: flex !important;
+        margin: 0.5rem auto 0;
+    }
+    
+    .skill-tags {
+        justify-content: center;
+    }
+}
+
+/* تأثيرات تحسين الأداء */
+@media (prefers-reduced-motion: reduce) {
+    .skill-details,
+    .level-progress,
+    .skill-item::before {
+        transition: none;
+    }
+}
+.level-progress.level-95 { 
+    width: 95%; }
+/*===============================*/
+/* Canva SVG Icon */
+.canva-svg {
+    width: 50px;
+    height: 50px;
+
+}
+#canva img{
+    width: 50px;
+    height: 50px;
+
+}
+
+
+/* Canva specific colors */
+#canva .level-progress-85 {
+    background: linear-gradient(90deg, #00C4CC, #00b4ba) !important;
+}
+
+/* Canva Certification Badge */
+.skill-certifications {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed rgba(0, 196, 204, 0.3);
+}
+
+.cert-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 196, 204, 0.1);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #00C4CC;
+    font-weight: 500;
+}
+
+.cert-badge i {
+    color: #FFD700;
+}
+
+/* Enhanced Canva icon animation */
+#canva:hover .canva-svg {
+    animation: float-canva 3s ease-in-out infinite;
+}
+
+@keyframes float-canva {
+    0%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+}
+
+/* Canva specific tooltip */
+#canva .skill-icon::after {
+    content: 'Canva Pro';
+    position: absolute;
+    bottom: -25px;
+    right: 50%;
+    transform: translateX(50%);
+    background: #00C4CC;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+
+#canva:hover .skill-icon::after {
+    opacity: 1;
+}
+
+/* Add this to your existing CSS if not present */
+.level-progress-85 {
+    width: 85%;
+}
+
+.level-progress-90 {
+    width: 90%;
+}
+
+.level-progress-95 {
+    width: 95%;
+}
+
+.level-progress {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 1s ease-in-out;
+}
