@@ -44,7 +44,7 @@
     text-align: center;
     margin-bottom: 2rem;
     padding-bottom: 1.5rem;
-    border-bottom: 2px solid #f1f5f9;
+    border-bottom: 2px solid #64748b;
 }
 
 .contact-card-header h3 {
@@ -84,7 +84,7 @@
 .method-icon {
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, var(--secondary-color), #3498db);
+  
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -95,6 +95,7 @@
 }
 
 .method-item:nth-child(1) .method-icon {
+    margin: center;
     background: linear-gradient(135deg, #1823c5, #020e80);
 }
 
@@ -140,7 +141,7 @@
 
 .contact-text {
     display: block;
-    color: #475569;
+    
     font-weight: 500;
     margin-bottom: 0.3rem;
 }
@@ -155,7 +156,7 @@
 .social-contact {
     margin-top: 2rem;
     padding-top: 1.5rem;
-    border-top: 2px solid #f1f5f9;
+    border-top: 2px solid #64748b;
 }
 
 .social-contact h4 {
@@ -164,29 +165,13 @@
     text-align: center;
 }
 
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
 
-.social-link {
-    width: 45px;
-    height: 45px;
-    background: var(--bg-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #64748b;
-    font-size: 1.2rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
+
+
 
 .social-link:hover {
     background: var(--secondary-color);
-    color: white;
+    color: var(--primary-color);
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
 }
@@ -204,7 +189,8 @@
 .cta-content i {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: var(--secondary-color);
+    
+    align-items: center;
 }
 
 .cta-content h4 {
@@ -225,14 +211,14 @@
     justify-content: center;
     gap: 10px;
     padding: 12px 30px;
-    background: var(--secondary-color);
+   
     color: white;
     margin-bottom: 30px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
-    border: 2px solid var(--secondary-color);
+    border: .5px solid #ccd1d1;
 }
 
 .btn-cta:hover {
@@ -292,16 +278,14 @@
     font-size: 0.95rem;
 }
 
-.form-group label i {
-    color: var(--secondary-color);
-}
+
 
 .form-group input,
 .form-group select,
 .form-group textarea {
     width: 100%;
     padding: 12px 15px;
-    border: 2px solid #e2e8f0;
+    border: 2px solid #233554;
     border-radius: 10px;
     font-size: 1rem;
     font-family: inherit;
@@ -401,7 +385,7 @@
 }
 
 .btn-submit {
-    background: linear-gradient(135deg, var(--secondary-color), #3498db);
+    background: linear-gradient(135deg, #00C4CC, #3498db);
     color: white;
     border: none;
     padding: 15px 40px;
@@ -504,12 +488,16 @@
     }
 
     .method-item {
-        flex-direction: column;
+        flex-direction: row;
         text-align: center;
     }
 
     .method-icon {
-        margin: 0 auto;
+        margin: center;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        flex-shrink: 0;
     }
 
     .btn-submit {
@@ -546,7 +534,7 @@
 
     .upload-area {
         border-color: #4a5568;
-        background: var(--secondary-color);
+      
     }
 
     .contact-cta {
@@ -563,21 +551,24 @@
 .canva-icon-cta {
     width: 30px;
     height: 30px;
+    color: white;
 }
-
+.btn-cta-secondary span {
+    color: white;
+}
 .btn-cta-secondary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background: rgba(0, 196, 204, 0.1);
-    color: #00C4CC;
+    background:linear-gradient(135deg, #00C4CC, #7B68EE);
+   
     padding: 10px 20px;
     border-radius: 16px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
-    border: 2px solid rgba(0, 196, 204, 0.3);
+   
     margin-top: 10px;
     width: 100%;
 }

@@ -9,6 +9,8 @@
     --transition: all 0.3s ease-in-out;
     --font-main: 'Cairo', sans-serif;
     --primary-color: #36D7FF;
+    --secondary-color: #ffffff;
+    --bg-primary: var(--bg-color);
 }
 
 * {
@@ -338,17 +340,7 @@ section {
     color: var(--text-primary);
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 12px;
-    background-color: var(--light-bg);
-    border: 1px solid #233554;
-    border-radius: 5px;
-    color: var(--text-primary);
-    font-family: var(--font-main);
-}
+
 
 .form-group input:focus,
 .form-group select:focus,
@@ -463,39 +455,8 @@ section {
         font-size: 15px;
     }
     
-    /* Navigation */
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        background-color: rgba(10, 25, 47, 0.98);
-        padding: 20px 0;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        z-index: 999;
-    }
-    
-    .nav-links.active {
-        display: flex;
-    }
-    
-    .nav-links li {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .nav-links a {
-        display: block;
-        padding: 10px 0;
-    }
-    
-    .hamburger {
-        display: block;
-        z-index: 1000;
-    }
+    /* Navigation (consolidated in styles/style.css) */
+    /* Mobile nav and hamburger behaviour moved to consolidated navigation section to avoid duplication. */
     
     /* Hero section */
     .hero {
@@ -566,7 +527,7 @@ section {
     
     .section-subtitle {
         font-size: 1rem;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
     
     /* Make images responsive */
@@ -591,14 +552,7 @@ section {
         font-size: 1.4rem;
     }
     
-    /* WhatsApp button */
-    .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        right: 20px;
-     
-    }
+    /* WhatsApp button - consolidated below */
 }
 
 /* Small mobile devices (portrait phones, less than 400px) */
@@ -670,21 +624,9 @@ footer {
     font-size: 0.9rem;
 }
 
-.social-links {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
 
-.social-links a {
-    font-size: 1.2rem;
-    color: var(--text-secondary);
-}
 
-.social-links a:hover {
-    color: var(--accent);
-}
+
 
 /* Floating WhatsApp Button */
 .whatsapp-float {
@@ -726,32 +668,9 @@ footer {
         font-size: 20px;
     }
 }
-/* Add this to your existing CSS */
-/* Active state - separate from hover */
-.nav-links a.active {
-    color: var(--secondary-color) !important;
-    font-weight: 600;
+/* Navigation - consolidated */
 
-}
-
-.nav-links a.active::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: -5px;
-    right: 0;
-    background-color: var(--secondary-color);
-    border-radius: 2px;
-    z-index: 1;
-    /* Above hover effect */
-}
-
-/* Optional: Add hover effect */
-.nav-links a:hover {
-    color: var(--secondary-color);
-}
-
+/* Base nav layout */
 .nav-links {
     display: flex;
     gap: 30px;
@@ -764,93 +683,12 @@ footer {
     transition: color 0.3s ease;
 }
 
-
-/* When hovering over active link, show hover effect too */
-.nav-links a.active:hover::after {
-    width: 100%;
-    background-color: var(--accent);
-    z-index: 2;
-    /* Above active effect */
+/* Hover & active states */
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent) !important;
 }
 
-/* Hover underline effect */
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    right: 0;
-    background-color: var(--accent);
-    transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
-
-.hamburger {
-    display: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: var(--accent);
-}
-
-/* Mobile menu styles */
-
-
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-
-    .nav-links {
-        position: fixed;
-        top: 70px;
-        right: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background: white;
-        flex-direction: column;
-        transition: 0.3s;
-        padding: 2rem;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-links.active {
-        right: 0;
-    }
-
-    .nav-links li {
-        margin: 1rem 0;
-        width: 100%;
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 1rem;
-        border-radius: 8px;
-        text-align: right;
-    }
-
-    .nav-links a.active {
-        background: rgba(52, 152, 219, 0.1);
-    }
-}
-
-/* Fix the conflict between hover::after and active::after */
-.nav-links a {
-    color: var(--text-primary);
-    font-size: 1rem;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: var(--accent);
-}
-
-/* Hover effect - only shows on hover */
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -861,42 +699,56 @@ footer {
     background-color: var(--accent);
     transition: width 0.3s ease;
     pointer-events: none;
-    /* Important */
 }
 
 .nav-links a:hover::after {
     width: 100%;
 }
 
+/* Keep underline visible for active links */
+.nav-links a.active::after {
+    width: 100% !important;
+    background-color:  var(--accent);
+}
 
+/* Hamburger */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--accent);
+}
 
-
-/* Mobile styles - separate active style */
+/* Mobile menu */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
+        z-index: 1000;
     }
 
     .nav-links {
+        display: flex;
+        flex-direction: column;
         position: fixed;
         top: 70px;
-        right: -100%;
-        width: 100%;
+        left: 0;
+        right: 0;
         height: calc(100vh - 70px);
-        background: white;
-        flex-direction: column;
-        transition: 0.3s;
-        padding: 2rem;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        background-color: rgba(10, 25, 47, 0.98);
+        padding: 2rem 1.5rem;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        align-items: flex-end;
+        z-index: 999;
     }
 
     .nav-links.active {
-        right: 0;
+        transform: translateX(0);
     }
 
     .nav-links li {
-        margin: 1rem 0;
         width: 100%;
+        margin: 0.5rem 0;
     }
 
     .nav-links a {
@@ -904,19 +756,20 @@ footer {
         padding: 1rem;
         border-radius: 8px;
         text-align: right;
+        color: var(--text-primary);
     }
 
-    /* Mobile active state */
     .nav-links a.active {
-        background: rgba(52, 152, 219, 0.1);
-        border-right: 3px solid var(--secondary-color);
+        background: rgba(52, 152, 219, 0.08);
+        border-right: 3px solid var(--accent);
     }
 
     /* Hide underline on mobile active */
-    .nav-links a.active::before {
+    .nav-links a.active::after {
         display: none;
     }
 }
+
 
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
@@ -924,15 +777,7 @@ footer {
         background: var(--bg-primary);
     }
 
-    .nav-links a.active {
-
-        padding: 2px 15px;
-        border-radius: 12px;
-        border: 0.2px solid var(--primary-color);;
-        box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
-        
-
-    }
+    
 }
 
 .nav-links a {
@@ -968,54 +813,24 @@ footer {
 /* Keep underline always visible for active links */
 .nav-links a.active::after {
     width: 100% !important;
-    background-color: var(--secondary-color);
+   
 }
 
 
 
-/* Mobile styles */
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
+/* legacy mobile nav removed (consolidated above) */
 
-    .nav-links {
-        position: fixed;
-        top: 70px;
-        right: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background: white;
-        flex-direction: column;
-        transition: 0.3s;
-        padding: 2rem;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-links.active {
-        right: 0;
-    }
-
-    .nav-links li {
-        margin: 1rem 0;
-        width: 100%;
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 1rem;
-        border-radius: 8px;
-        text-align: right;
-    }
-
-    /* Mobile active state */
-    .nav-links a.active {
-        background: rgba(52, 152, 219, 0.1);
-        border-right: 3px solid var(--secondary-color);
-    }
-
-    /* Mobile active underline */
-    .nav-links a.active::after {
-        display: none;
-    }
+/* Canva slide gradients (moved from inline styles) */
+.canva-slide {
+    padding: 2.5rem 1.5rem;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
 }
+
+.bg-grad-1 { background: linear-gradient(135deg, #00C4CC, #7B68EE); }
+.bg-grad-2 { background: linear-gradient(135deg, #FF6B6B, #FFA726); }
+.bg-grad-3 { background: linear-gradient(135deg, #4ECDC4, #45B7D1); }

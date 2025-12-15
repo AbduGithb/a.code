@@ -124,7 +124,7 @@
     content: "✓";
     position: absolute;
     right: 0;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-weight: bold;
 }
 
@@ -179,7 +179,7 @@
 .skill-toggle {
     background: none;
     border: none;
-    color: var(--secondary-color);
+    color: var(--text-primary-color);
     cursor: pointer;
     font-size: 0.9rem;
     margin-top: 0.5rem;
