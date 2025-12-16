@@ -117,9 +117,11 @@ ul {
 }
 
 .description {
+
     color: var(--text-secondary);
     font-size: 1.1rem;
     max-width: 600px;
+    Text-align: right;
     margin-bottom: 40px;
 }
 
@@ -203,7 +205,7 @@ section {
     height: 100%;
     object-fit: contain;
     border-radius: 12px;
-   
+
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
@@ -223,7 +225,7 @@ section {
     align-items: center;
     justify-content: center;
     position: relative;
-   
+
 }
 
 .img-placeholder::after {
@@ -292,10 +294,12 @@ section {
     color: var(--text-primary);
     font-weight: 600;
 }
-.highlight{
-     color: var(--accent);
-     font-weight: 600;
+
+.description span {
+    color: var(--accent);
+    font-weight: 600;
 }
+
 .btn-link:hover {
     color: var(--accent);
 }
@@ -368,7 +372,7 @@ section {
         max-width: 540px;
         margin: 0 auto;
     }
-    
+
     .hero h1 {
         font-size: 2.8rem;
     }
@@ -379,43 +383,44 @@ section {
     .container {
         max-width: 720px;
     }
-    
+
     /* Show nav links and hide hamburger on larger screens */
     .nav-links {
-        display: flex !important; /* Override any inline styles */
+        display: flex !important;
+        /* Override any inline styles */
     }
-    
+
     .hamburger {
         display: none;
     }
-    
+
     .hero-content {
         grid-template-columns: 1.2fr 0.8fr;
         text-align: right;
         gap: 30px;
     }
-    
+
     .hero h1 {
         font-size: 3.2rem;
     }
-    
+
     .code-card {
         display: block !important;
         max-width: 100%;
         margin: 0 auto;
     }
-    
+
     .about-content,
     .contact-wrapper {
         grid-template-columns: 1fr 1fr;
         gap: 40px;
     }
-    
+
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
-   
+
+
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -423,16 +428,16 @@ section {
     .container {
         max-width: 960px;
     }
-    
+
     .hero h1 {
         font-size: 3.5rem;
     }
-    
+
     .services-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    
-  
+
+
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -440,6 +445,7 @@ section {
     .container {
         max-width: 1140px;
     }
+
     #hero .cta-buttons {
         display: flex;
         flex-direction: row;
@@ -450,108 +456,109 @@ section {
 
 /* Mobile-specific styles */
 @media (max-width: 767.98px) {
+
     /* Base mobile styles */
     html {
         font-size: 15px;
     }
-    
+
     /* Navigation (consolidated in styles/style.css) */
     /* Mobile nav and hamburger behaviour moved to consolidated navigation section to avoid duplication. */
-    
+
     /* Hero section */
     .hero {
         padding-top: 100px;
         padding-bottom: 60px;
     }
-    
+
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 40px;
     }
-    
+
     .hero h1 {
         font-size: 2.3rem;
         margin-bottom: 15px;
     }
-    
+
     .subtitle {
         font-size: 1.1rem;
     }
-    
+
     .description {
         font-size: 1rem;
         margin-bottom: 30px;
     }
-    
+
     .cta-buttons {
         flex-direction: column;
         gap: 15px;
     }
-    
+
     .btn {
         width: 100%;
         padding: 12px 20px;
     }
-    
+
     /* About section */
     .about-content {
         grid-template-columns: 1fr;
         gap: 30px;
         text-align: center;
     }
-    
+
     /* Services */
     .services-grid {
         grid-template-columns: 1fr;
         gap: 25px;
     }
-    
-  
-    
+
+
+
     /* Contact */
     .contact-wrapper {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+
     /* Adjust section paddings */
     section {
         padding: 60px 0;
     }
-    
+
     .section-title {
         font-size: 2rem;
         margin-bottom: 15px;
     }
-    
+
     .section-subtitle {
         font-size: 1rem;
         margin-bottom: 20px;
     }
-    
+
     /* Make images responsive */
     img {
         max-width: 100%;
         height: auto;
     }
-    
+
     /* Form elements */
     .form-group input,
     .form-group select,
     .form-group textarea {
         padding: 10px 12px;
     }
-    
+
     /* Adjust font sizes */
     h2 {
         font-size: 1.8rem;
     }
-    
+
     h3 {
         font-size: 1.4rem;
     }
-    
+
     /* WhatsApp button - consolidated below */
 }
 
@@ -560,20 +567,22 @@ section {
     .hero h1 {
         font-size: 2rem;
     }
-     .cta-buttons {
+
+    .cta-buttons {
         flex-direction: column;
         gap: 15px;
         width: 100%;
     }
+
     .btn {
         padding: 10px 15px;
         font-size: 0.9rem;
     }
-    
+
     .section-title {
         font-size: 1.7rem;
     }
-  
+
 }
 
 /* Fix for very small devices (like iPhone 5/SE) */
@@ -581,11 +590,11 @@ section {
     .hero h1 {
         font-size: 1.8rem;
     }
-    
+
     .subtitle {
         font-size: 1rem;
     }
-    
+
     .section-title {
         font-size: 1.5rem;
     }
@@ -593,21 +602,24 @@ section {
 
 /* Print styles */
 @media print {
-    .navbar, .hamburger, .whatsapp-float {
+
+    .navbar,
+    .hamburger,
+    .whatsapp-float {
         display: none !important;
     }
-    
+
     body {
         padding-top: 0;
         color: #000;
         background: #fff;
     }
-    
+
     .container {
         width: 100%;
         padding: 0;
     }
-    
+
     a::after {
         content: " (" attr(href) ")";
         font-size: 0.8em;
@@ -631,9 +643,9 @@ footer {
 /* Floating WhatsApp Button */
 .whatsapp-float {
     position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
     left: 40px;
     right: auto;
     color: #FFF;
@@ -668,6 +680,7 @@ footer {
         font-size: 20px;
     }
 }
+
 /* Navigation - consolidated */
 
 /* Base nav layout */
@@ -708,7 +721,7 @@ footer {
 /* Keep underline visible for active links */
 .nav-links a.active::after {
     width: 100% !important;
-    background-color:  var(--accent);
+    background-color: var(--accent);
 }
 
 /* Hamburger */
@@ -777,7 +790,7 @@ footer {
         background: var(--bg-primary);
     }
 
-    
+
 }
 
 .nav-links a {
@@ -813,7 +826,7 @@ footer {
 /* Keep underline always visible for active links */
 .nav-links a.active::after {
     width: 100% !important;
-   
+
 }
 
 
@@ -831,6 +844,14 @@ footer {
     gap: 8px;
 }
 
-.bg-grad-1 { background: linear-gradient(135deg, #00C4CC, #7B68EE); }
-.bg-grad-2 { background: linear-gradient(135deg, #FF6B6B, #FFA726); }
-.bg-grad-3 { background: linear-gradient(135deg, #4ECDC4, #45B7D1); }
+.bg-grad-1 {
+    background: linear-gradient(135deg, #00C4CC, #7B68EE);
+}
+
+.bg-grad-2 {
+    background: linear-gradient(135deg, #FF6B6B, #FFA726);
+}
+
+.bg-grad-3 {
+    background: linear-gradient(135deg, #4ECDC4, #45B7D1);
+}

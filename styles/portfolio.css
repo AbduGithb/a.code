@@ -221,7 +221,7 @@
 .project-link:nth-child(3) { transition-delay: 0.3s; }
 
 .project-link:hover {
-    background: var(--secondary-color);
+    background: var(--primary-color);
     color: white;
     transform: scale(1.1);
 }
@@ -447,7 +447,7 @@
 }
 
 .btn-load-more:hover {
-    background: var(--secondary-color);
+    background: var(--primary-color);
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 5px 20px rgba(52, 152, 219, 0.3);
@@ -572,7 +572,7 @@
     }
     
     .btn-load-more:hover {
-        background: var(--secondary-color);
+       background: var(--primary-color);
         color: white;
     }
 }
