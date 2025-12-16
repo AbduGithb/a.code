@@ -119,6 +119,7 @@
     <link rel="stylesheet" href="styles/contact.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/article.css">
+    <link rel="stylesheet" href="styles/animations.css">
     <!-- Pricing CSS -->
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
@@ -147,15 +148,50 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
-        <div class="container hero-content">
+        <div id="initial-page">
+            <!-- Social Links -->
+                <div class="social-links">
+                            <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="social-link"
+                                title="GitHub">
+                                <i class="fab fa-github"></i>
+                                <span class="social-tooltip">GitHub</span>
+                            </a>
+                            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener"
+                                class="social-link" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                                <span class="social-tooltip">LinkedIn</span>
+                            </a>
+                            <a href="https://wa.me/966510216391" target="_blank" rel="noopener"
+                                class="social-link whatsapp" title="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                                <span class="social-tooltip">WhatsApp</span>
+                            </a>
+                            <a href="https://canva.com/design/yourportfolio" target="_blank" rel="noopener"
+                                class="social-link canva" title="Canva Portfolio">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg"
+                                    alt="Canva" class="canva-icon-social">
+                                <span class="social-tooltip">Canva Portfolio</span>
+                            </a>
+                </div>
+            <h1>مرحبًا، بكم  </h1>
+            <h1>  في موقع  <span class="gradient-text">أعمالي</span></h1>
+        <div class="loading-bar">
+            <div class="loading-progress" id="loadingProgress"></div>
+        </div>
+        </div>
+        <div id="hero-content" class="container hero-content">
             <div class="hero-text">
                 <p class="subtitle">مرحبًا، أنا <span class="highlight">عبد الله الزبير محمد</span></p>
                 <h1>أصمم واقعًا رقميًا <span class="gradient-text">أنيقًا</span></h1>
                 <p class="description">
                     أنا مبرمج ومطور متخصص في بناء تطبيقات ومواقع ويب عالية الجودة مع تركيز على السرعة، الأناقة، وتجربة
-                    المستخدم. باستخدام <span> ( Flutter & Dart ) </span>أعمل على تطوير تطبيقات جوال احترافية وعالية الأداء تعمل على
-                    منصّتي <span> ( iOS & Android ) </span> من قاعدة كود واحدة. كما أمتلك خبرة واسعة في تطوير مواقع ويب تفاعلية وسريعة
-                    الاستجابة باستخدام <span> ( HTML5 & CSS3 & JavaScript ) </span>إضافةً إلى إنشاء مواقع احترافية وإدارتها عبر  <span> ( WordPress )</span> بما في ذلك تخصيص القوالب، تطوير الإضافات، وتحسين الأداء وتحسين محركات البحث <span>
+                    المستخدم. باستخدام <span> ( Flutter & Dart ) </span>أعمل على تطوير تطبيقات جوال احترافية وعالية
+                    الأداء تعمل على
+                    منصّتي <span> ( iOS & Android ) </span> من قاعدة كود واحدة. كما أمتلك خبرة واسعة في تطوير مواقع ويب
+                    تفاعلية وسريعة
+                    الاستجابة باستخدام <span> ( HTML5 & CSS3 & JavaScript ) </span>إضافةً إلى إنشاء مواقع احترافية
+                    وإدارتها عبر <span> ( WordPress )</span> بما في ذلك تخصيص القوالب، تطوير الإضافات، وتحسين الأداء
+                    وتحسين محركات البحث <span>
                         ( SEO )</span> كما
                     أقوم بتصميم جرافيك وتصاميم بروموشن و محتوى تسويقي باستخدام <span> ( Canva Pro )</span>.
 
@@ -182,6 +218,13 @@
         </div>
 
     </section>
+
+
+
+
+
+
+
 
     <!-- Services Section -->
     <section id="services" class="services">
@@ -1661,6 +1704,9 @@
     <script src="js/portfolio.js"></script>
     <script src="js/contact.js"></script>
     <script src="js/footer.js"></script>
+    <script src="js/animations.js"></script>
+    
+
 </body>
 
 </html>
