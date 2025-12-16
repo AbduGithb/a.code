@@ -56,3 +56,17 @@ img {
     pointer-events: none;
 }
 
+@media (max-width: 400px) {
+   #initial-page {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start-center;
+    font-size: 2rem;
+} 
+
+}
